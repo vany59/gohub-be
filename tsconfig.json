@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "lib": ["es6"],
+    "allowJs": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "target": "ES5",
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@environment": ["environment"],
+      "@models": ["models"],
+      "@configs": ["configs"],
+      "@gateway": ["gateway"],
+      "@socketio": ["socketio"],
+      "@guard": ["guard"],
+      "@service": ["service"],
+      "@decorator": ["decorator"],
+      "@types": ["types"],
+      "@res": ["res"],
+      "shared": ["shared"],
+      "@utils": ["utils"],
+      "@constant": ["constant"]
+    }
+  },
+  "compileOnSave": false,
+  "exclude": [
+    "node_modules",
+    "coverage",
+    "document",
+    "dist",
+    "backup",
+    "**/*.spec.ts"
+  ]
+}

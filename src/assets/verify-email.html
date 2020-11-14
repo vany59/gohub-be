@@ -1,0 +1,292 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Verify your email address</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css" rel="stylesheet" media="all">
+    /* Base ------------------------------ */
+    *:not(br):not(tr):not(html) {
+      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100% !important;
+      height: 100%;
+      margin: 0;
+      line-height: 1.4;
+      background-color: #F5F7F9;
+      color: #839197;
+      -webkit-text-size-adjust: none;
+    }
+
+    a {
+      color: #414EF9;
+    }
+
+    /* Layout ------------------------------ */
+    .email-wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #F5F7F9;
+    }
+
+    .email-content {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Masthead ----------------------- */
+    .email-masthead {
+      padding: 25px 0;
+      text-align: center;
+    }
+
+    .email-masthead_logo {
+      max-width: 400px;
+      border: 0;
+    }
+
+    .email-masthead_name {
+      font-size: 16px;
+      font-weight: bold;
+      color: #839197;
+      text-decoration: none;
+      text-shadow: 0 1px 0 white;
+    }
+
+    /* Body ------------------------------ */
+    .email-body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid #E7EAEC;
+      border-bottom: 1px solid #E7EAEC;
+      background-color: #FFFFFF;
+    }
+
+    .email-body_inner {
+      width: 570px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .email-footer {
+      width: 570px;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+    }
+
+    .email-footer p {
+      color: #839197;
+    }
+
+    .body-action {
+      width: 100%;
+      margin: 30px auto;
+      padding: 0;
+      text-align: center;
+    }
+
+    .body-sub {
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid #E7EAEC;
+    }
+
+    .content-cell {
+      padding: 35px;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    /* Type ------------------------------ */
+    h1 {
+      margin-top: 0;
+      color: #292E31;
+      font-size: 19px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #292E31;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #292E31;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    p {
+      margin-top: 0;
+      color: #839197;
+      font-size: 16px;
+      line-height: 1.5em;
+      text-align: left;
+    }
+
+    p.sub {
+      font-size: 12px;
+    }
+
+    p.center {
+      text-align: center;
+    }
+
+    /* Buttons ------------------------------ */
+    .button {
+      display: inline-block;
+      width: 200px;
+      background-color: #414EF9;
+      border-radius: 3px;
+      color: #ffffff;
+      font-size: 15px;
+      line-height: 45px;
+      text-align: center;
+      text-decoration: none;
+      -webkit-text-size-adjust: none;
+      /* mso-hide: all; */
+    }
+
+    .button--green {
+      background-color: #28DB67;
+    }
+
+    .button--red {
+      background-color: #FF3665;
+    }
+
+    .button--blue {
+      background-color: #414EF9;
+    }
+
+    #copy {
+      cursor: pointer;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      font-size: 12px;
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+    /*Media Queries ------------------------------ */
+    @media only screen and (max-width: 600px) {
+
+      .email-body_inner,
+      .email-footer {
+        width: 100% !important;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .button {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center">
+        <table class="email-content" width="100%" cellpadding="0" cellspacing="0">
+          <!-- Logo -->
+          <tr>
+            <td class="email-masthead">
+              <a class="email-masthead_name">
+                <img
+                  src="https://lh3.googleusercontent.com/6UvG0RqHEoBpXC5plGGgC-T70oA8dSS4pIZyO8nTQyGTaR7BNL4w6PDH2n_uC9tNXz71l2ZpN6CQuucb3KfP8_m7x8DhGqNI1ughvY5WVSR2Huus_afhNOhR1XEEaUk12EC5SmGAA7uQm90TUhy2YOtA8UhGjEkAxBzF4dwpz6R2RbQXcAT-l3Rv7vn9NkPYQEvmxMQN-KQJIvm2jltyZsfYgkgHdiLEWHCV9ScyNY4SUbIJL3qvb-7IbqFbkZrH9tlHGwFa95u55WPCF7wheBO6AueedOxMvhMBVqcJZN1KbURfvpwNf9CMtY7C5HDB3ZBdGsuNuM7Pck5DVPo-SQGKnUyrZIPCivH2nOeY-3XS3qHmzYLdbA4YDcFfivIDQ0ZVMHfWwCOEdrq0jg7GBDyfs6_p8U-J8QiSrV67WSYtIa2ra-EVPZqBHLAoV6xJ2LSiQEOq7vWZKsUtKPmlv5Q_HI1aZr7ZSKP3AeLaEuykyID6WDo5LHXkfKKYwq_UHcLlanxl66cWNr0i4ejDWWjbWSH-ORKIX5hLAVJzoqs5W0N6Fcs3NHWMu1WzDdjX_XUA6fFcw2ZLeBrh3AnGNaPfFQWP_xBMZeW7gYJ68HRw76U1pVbwMtEY2RBMNTA-puMg5P5tG80iolsjaPEa3w22L0llPG8FRc9OBd0kGhXBpH3nhj-ibPo=w130-h96-no">
+              </a>
+            </td>
+          </tr>
+          <!-- Email Body -->
+          <tr>
+            <td class="email-body" width="100%">
+              <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0">
+                <!-- Body content -->
+                <tr>
+                  <td class="content-cell">
+                    <h1>Verify your email address</h1>
+                    <p>Thanks for signing up for vanyteam! We're excited to have you as an early user. Your verify code
+                      below here: </p>
+                    <!-- Action -->
+                    <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td align="center">
+                          <div>
+                            <span id="code" class="button button--blue">{{code}}</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                    <p>Thanks,<br>Vany Team</p>
+                    <!-- Sub copy -->
+                    <table class="body-sub">
+                      <tr>
+                        <td>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="content-cell">
+                    <p class="sub center">
+                      <br>{{address}}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
