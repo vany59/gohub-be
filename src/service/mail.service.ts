@@ -13,20 +13,20 @@ export const sendMail = ({ to, username, code }) => {
         logger: false,
         auth: {
           user: MAIL_USERNAME,
-          pass: MAIL_PASSWORD,
-        },
+          pass: MAIL_PASSWORD
+        }
       },
       {
-        from: "vanyteam <vanyteam123@gmail.com>",
+        from: "goTeam <vanyteam123@gmail.com>"
       }
     );
 
     const message = (html) => {
       return {
         to: `<${to}>`,
-        subject: "Verify email",
+        subject: "Password",
         text: `Hi ${username},`,
-        html,
+        html
       };
     };
 
@@ -44,7 +44,7 @@ export const sendMail = ({ to, username, code }) => {
       const template = Handlebars.compile(source);
       const html = template({
         code,
-        address: ADDRESS,
+        address: ADDRESS
       });
       const mailOption = message(html);
       transporter.sendMail(mailOption, (error, info) => {
@@ -59,12 +59,13 @@ export const sendMail = ({ to, username, code }) => {
     });
   } catch (err) {
     console.log(err);
-    throw new err();
+    return new Error(err);
+    // throw new err();
   }
 };
 
 // sendMail({
 //   to: "levanyy2@gmail.com",
 //   username: "levany",
-//   code: 567891,
+//   code: 567891
 // });

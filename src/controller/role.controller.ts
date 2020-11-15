@@ -20,7 +20,6 @@ import { M_TEACHER, P_CREATE, P_DELETE, P_READ, P_UPDATE } from "@constant";
 import { Filters } from "@utils";
 import * as _ from "lodash";
 
-@UseGuards(AuthGuard)
 @Controller("roles")
 @UsePipes(ValidationPipe)
 export class RolesController {

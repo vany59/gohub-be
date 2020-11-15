@@ -14,14 +14,20 @@ enum userType {
 }
 
 export class CreateUserDto {
+  @IsNotEmpty()
+  firstName: string;
+
+  @IsNotEmpty()
+  lastName: string;
+
   @ApiProperty()
   @IsNotEmpty()
   @MinLength(6)
   username: string;
 
-  @ApiProperty()
-  @MinLength(6, { message: "Password to short" })
-  @IsNotEmpty()
+  // @ApiProperty()
+  // @MinLength(6, { message: "Password to short" })
+  // @IsNotEmpty()
   password: string;
 
   @ApiProperty()
@@ -38,7 +44,6 @@ export class CreateUserDto {
   @IsNotEmpty()
   type: userType;
 
-  @IsNotEmpty()
   role: string;
 }
 

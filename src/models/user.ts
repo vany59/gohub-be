@@ -14,6 +14,14 @@ export class User {
 
   @Column()
   @Expose()
+  firstName: string;
+
+  @Column()
+  @Expose()
+  lastName: string;
+
+  @Column()
+  @Expose()
   username: string;
 
   @Column()
@@ -64,6 +72,10 @@ export class User {
   @Expose()
   updatedAt: number;
 
+  @Column()
+  @Expose()
+  isActive: boolean;
+
   constructor(user: Partial<User>) {
     if (user) {
       Object.assign(
@@ -73,6 +85,7 @@ export class User {
         })
       );
       this._id = this._id || uuid.v1();
+      this.isActive = this.isActive || true;
       this.isRoot = false;
       this.createdAt = this.createdAt || +new Date();
       this.updatedAt = +new Date();

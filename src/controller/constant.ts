@@ -12,63 +12,16 @@ import {
 } from "@nestjs/common";
 import { ApiBearerAuth, ApiBody, ApiTags } from "@nestjs/swagger";
 import { AuthGuard } from "@guard";
-import { District, Mission, Privilege, Province, Ward } from "@models";
+import { Mission, Privilege } from "@models";
 import { getMongoRepository } from "typeorm";
 import { InputDistrictDto, InputWardDto, UtilDto } from "@types";
 import { ERROR, OK } from "@res";
 import { Filters } from "@utils";
 
-// @UseGuards(AuthGuard)
-@ApiTags("constant")
-@ApiBearerAuth()
+@UseGuards(AuthGuard)
 @UsePipes(ValidationPipe)
 @Controller("constant")
-export class ProvinceController {
-  @Post("/province/paging")
-  @ApiBody({ type: UtilDto, required: false })
-  async province(@Body() body: UtilDto) {
-    const { filters } = body;
-    try {
-      const province = await getMongoRepository(Province);
-      let provinceList = await await province.find();
-      if (filters) {
-        filters.forEach(({ key, value }) => {
-          key = key === "id" ? "_id" : key;
-          provinceList = provinceList.filter((item) => item[key] === value);
-        });
-      }
-      const data = provinceList.map((item) => ({
-        id: item._id,
-        name: item.label
-      }));
-      return OK(data);
-    } catch (e) {
-      return ERROR(e);
-    }
-  }
-
-  @Post("/district/paging")
-  @ApiBody({ type: UtilDto, required: false })
-  async district(@Body() body: UtilDto) {
-    const { filters } = body;
-    const item = Filters(filters);
-    // console.log({ ...item });
-    const districts = await getMongoRepository(District).find({ ...item });
-    const data = districts.map(({ _id, label }) => ({ id: _id, name: label }));
-    return OK(data);
-  }
-
-  @Post("/ward/paging")
-  @ApiBody({ type: UtilDto, required: false })
-  async ward(@Body() body: UtilDto) {
-    // console.log(body);
-    const { filters } = body;
-    const item = Filters(filters);
-    const wards = await getMongoRepository(Ward).find({ ...item });
-    const data = wards.map(({ _id, label }) => ({ id: _id, name: label }));
-    return OK(data);
-  }
-
+export class ConstantController {
   @Put("/privilege")
   async privilege(@Body() body: any) {
     try {
